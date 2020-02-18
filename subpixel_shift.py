@@ -42,3 +42,19 @@ plt.subplot(122)
 plt.imshow(shifted, interpolation='none')
 plt.title('Shifted data')
 plt.show()
+
+#another way is to use scipy.ndimage.fourier_shift:
+#this doesn't require you to define a new x, y grid
+#but you still need to use f instead of data otherwise
+#the data will wrap around to the other edge.
+
+shifted = =ifft(scipy.ndimage.fourier_shift(fft(f),[2.5,1.5])).real 
+
+plt.figure() #plot to show the original data and the shifted data
+plt.subplot(121)
+plt.imshow(f, interpolation='none')
+plt.title('Original data')
+plt.subplot(122)
+plt.imshow(shifted, interpolation='none')
+plt.title('Shifted data')
+plt.show()
