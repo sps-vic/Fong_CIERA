@@ -1,0 +1,2 @@
+duration	time_plus	time_minus	flux	flux_plus	flux_minus
+8078.109	31715.242	-7991.933	2.00040024e-13	6.870113e-14	-5.7023499e-14
